@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Is today the day Marty McFly arrives when he travels to the future?</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>Is today the day Marty McFly arrives when he travels to the future?</h1>
+    <div class="answer">YES</div>
+    <div class="image-container">
+      <img src="delorean-clock.jpg" alt="[delorean clock]">
+      <div class="month"></div>
+      <div class="day"></div>
+      <div class="year"></div>
+    </div>
+    <div>The Day Marty McFly arrives when he travels to the future is <span class="today-text">October 21st 2015</span>.</div>
+    <script src="moment.min.js"></script>
+    <script>
+      var today = moment();
+      document.querySelector('.month').className += ' ' + today.format('MMM');
+      document.querySelector('.day').className += ' d' + today.format('DD');
+      document.querySelector('.year').className += ' y' + today.format('YYYY');
+      document.querySelector('.today-text').innerHTML = today.format('MMMM Do YYYY');
+    </script>
+  </body>
+</html>

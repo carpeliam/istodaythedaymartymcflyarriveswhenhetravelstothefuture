@@ -1,0 +1,51 @@
+body {
+  text-align: center;
+  font-size: 1.2em;
+  font-family: helvetica, arial, sans-serif;
+}
+
+.answer {
+  font-size: 200px;
+  font-weight: bold;
+}
+
+.image-container {
+  display: inline-block;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.month, .day, .year {
+  position: absolute;
+  top: 56px;
+  height: 41px;
+  background: none no-repeat left center;
+}
+
+.month {
+  left: 55px;
+  width: 92px;
+  background-image: url('months.jpg');
+}
+
+.day {
+  left: 162px;
+  width: 56px;
+  background-image: url('days.jpg');
+}
+
+.year {
+  left: 238px;
+  width: 110px;
+  background-image: url('years.jpg');
+}
+
+/* TODO: generate sprites and calculate position offsets.
+
+.month.Feb { background-position: 0px -10px; }
+
+.day.d01 { background-position: 0px -10px; }
+
+.year.y2014 { background-position: 0px -10px; }
+
+*/
