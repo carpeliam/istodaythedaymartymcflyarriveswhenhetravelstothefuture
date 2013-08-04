@@ -15,37 +15,62 @@ body {
   position: relative;
 }
 
-.month, .day, .year {
+.month, .day span, .year span {
   position: absolute;
   top: 56px;
   height: 41px;
-  background: none no-repeat left center;
+  background: url('sprite.png') no-repeat left center;
 }
 
 .month {
-  left: 55px;
-  width: 92px;
-  background-image: url('months.jpg');
+  left: 59px;
+  width: 84px;
 }
 
-.day {
+.day span, .year span {
+  width: 28px;
+}
+
+.day span.d10 {
   left: 162px;
-  width: 56px;
-  background-image: url('days.jpg');
+}
+.day span.d01 {
+  left: 190px;
 }
 
-.year {
+.year span.y1000 {
   left: 238px;
-  width: 110px;
-  background-image: url('years.jpg');
+}
+.year span.y0100 {
+  left: 266px;
+}
+.year span.y0010 {
+  left: 294px;
+}
+.year span.y0001 {
+  left: 322px;
 }
 
-/* TODO: generate sprites and calculate position offsets.
+.month.Jan { background-position: -7px -7px; }
+.month.Feb { background-position: -91px -7px; }
+.month.Mar { background-position: -175px -7px; }
+.month.Apr { background-position: -258px -7px; }
+.month.May { background-position: -341px -7px; }
+.month.Jun { background-position: -425px -7px; }
+.month.Jul { background-position: -509px -7px; }
+.month.Aug { background-position: -593px -7px; }
+.month.Sep { background-position: -676px -7px; }
+.month.Oct { background-position: -759px -7px; }
+.month.Nov { background-position: -842px -7px; }
+.month.Dec { background-position: -925px -7px; }
 
-.month.Feb { background-position: 0px -10px; }
-
-.day.d01 { background-position: 0px -10px; }
-
-.year.y2014 { background-position: 0px -10px; }
-
-*/
+.day span.n0, .year span.n0 { background-position: -1009px -7px; }
+.day span.n1, .year span.n1 { background-position: -1037px -7px; }
+.day span.n2, .year span.n2 { background-position: -1066px -7px; }
+.day span.n3, .year span.n3 { background-position: -1094px -7px; }
+.day span.n4, .year span.n4 { background-position: -1122px -7px; }
+.day span.n5, .year span.n5 { background-position: -1150px -7px; }
+.day span.n6, .year span.n6 { background-position: -1178px -7px; }
+.day span.n7, .year span.n7 { background-position: -1206px -7px; }
+.day span.n8, .year span.n8 { background-position: -1234px -7px; }
+.day span.n9, .year span.n9 { background-position: -1262px -7px; }

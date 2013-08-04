@@ -11,16 +11,28 @@
     <div class="image-container">
       <img src="delorean-clock.jpg" alt="[delorean clock]">
       <div class="month"></div>
-      <div class="day"></div>
-      <div class="year"></div>
+      <div class="day">
+        <span class="d10"></span>
+        <span class="d01"></span>
+      </div>
+      <div class="year">
+        <span class="y1000"></span>
+        <span class="y0100"></span>
+        <span class="y0010"></span>
+        <span class="y0001"></span>
+      </div>
     </div>
     <div>The Day Marty McFly arrives when he travels to the future is <span class="today-text">October 21st 2015</span>.</div>
     <script src="moment.min.js"></script>
     <script>
       var today = moment();
       document.querySelector('.month').className += ' ' + today.format('MMM');
-      document.querySelector('.day').className += ' d' + today.format('DD');
-      document.querySelector('.year').className += ' y' + today.format('YYYY');
+      document.querySelector('.day span.d10').className += ' n' + today.format('DD').charAt(0);
+      document.querySelector('.day span.d01').className += ' n' + today.format('DD').charAt(1);
+      document.querySelector('.year span.y1000').className += ' n' + today.format('YYYY').charAt(0);
+      document.querySelector('.year span.y0100').className += ' n' + today.format('YYYY').charAt(1);
+      document.querySelector('.year span.y0010').className += ' n' + today.format('YYYY').charAt(2);
+      document.querySelector('.year span.y0001').className += ' n' + today.format('YYYY').charAt(3);
       document.querySelector('.today-text').innerHTML = today.format('MMMM Do YYYY');
     </script>
   </body>
