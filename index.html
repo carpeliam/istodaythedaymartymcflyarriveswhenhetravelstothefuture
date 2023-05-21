@@ -5,6 +5,15 @@
     <title>Is today the day Marty McFly arrives when he travels to the future?</title>
     <link href="style.css" rel="stylesheet" type="text/css">
     <meta property="og:image" content="https://carpeliam.github.com/istodaythedaymartymcflyarriveswhenhetravelstothefuture/delorean-clock.jpg">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K9M1HLW9X3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-K9M1HLW9X3');
+    </script>
   </head>
   <body>
     <h1>Is today the day Marty McFly arrives when he travels to the future?</h1>
@@ -38,15 +47,6 @@
       document.querySelector('.year span.y0010').className += ' n' + today.format('YYYY').charAt(2);
       document.querySelector('.year span.y0001').className += ' n' + today.format('YYYY').charAt(3);
       document.querySelector('.today-text').innerHTML = today.format('MMMM Do YYYY');
-    </script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-23415161-2', 'carpeliam.com');
-      ga('send', 'pageview');
     </script>
   </body>
 </html>
